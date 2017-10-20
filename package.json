@@ -1,0 +1,14 @@
+{
+  "name": "user-info-app",
+  "version": "1.0.0",
+  "description": "A simple app that is the basic of a User Management System",
+  "main": "index.js",
+  "scripts": {
+    "test": "node app.js"
+  },
+  "author": "M. el Ouali",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
