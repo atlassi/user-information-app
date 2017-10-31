@@ -1,5 +1,12 @@
+doctype html
 html
-	header
-		title= Titeltje
-			body
-				p= variabel of
+	head
+	body
+		h2 #{status}
+		h2 User Management System
+		p Users are listed below
+			each person in user
+				li Firstname: #{person.firstname}  
+				li Lastname: #{person.lastname}
+				li E-mail: #{person.email}
+				br
