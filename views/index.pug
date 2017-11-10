@@ -4,8 +4,8 @@ html
 		title  Homepage
 		title
 			| My personal website
-	body
-		h2 #{welcome}
+		body
+			h2 #{welcome}
 		
 			h1 Search user
 			input(type='text' placeholder='e.g. Ahmed Jan')
@@ -18,34 +18,33 @@ html
 
 		script.
 			
+			
 				$("input").keyup(function(){ 
 
 
-						var searchField = $("input").val();
+					setTimeout(function(){
+
+					var searchField = $("input").val();
 
 						$.get("/", { usrInput: searchField }, function(data){
 						
 						if(data.fName || data.lName){
-							$("#countryListP").html(` <Found user: <br> <br> <red>${data.fName} 
-								${data.lName} 
+							$("#countryListP").html(`${data.fName} 
+								${data.lName} <br> 
 							`)
 
 						}
 					});
 			
+
 					
 
 
+				}, 300);
 
 
 				});
 			
-
-			
-
-				
-
-
 
 
 
