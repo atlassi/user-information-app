@@ -1,16 +1,17 @@
 {
-  "name": "user-info-app",
+  "name": "user-information-app-ajax",
   "version": "1.0.0",
-  "description": "A simple app that is the basic of a User Management System",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "node app.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "M. el Ouali",
+  "author": "Mustafa el Ouali",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
     "pug": "^2.0.0-rc.4"
-  }
+  },
+  "devDependencies": {},
+  "description": ""
 }
