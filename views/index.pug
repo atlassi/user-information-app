@@ -1,24 +1,15 @@
 html
 	head
-		link(rel='stylesheet', type='text/css', href='css/style.css')
+		//- link(rel='stylesheet', type='text/css', href='css/style.css')
 		title  Homepage
 		title
 			| My personal website
 	body
 		h2 #{welcome}
-		ul
-			li
-				a(href="#")  Services     
-			li
-				a(href="#")   About        
-			li
-				a(href="#")  Contact
 		
-			p Search country
-			input(type='text' placeholder='e.g. Netherlands')
-			button search
-			p Countries found are :
-			li
+			h1 Search user
+			input(type='text' placeholder='e.g. Ahmed Jan')
+			ul
 				a#countryListP
 		script(src='https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js')
 		
@@ -30,25 +21,21 @@ html
 				$("input").keyup(function(){ 
 
 
-					setTimeout(function(){
-
-					var searchField = $("input").val();
+						var searchField = $("input").val();
 
 						$.get("/", { usrInput: searchField }, function(data){
 						
 						if(data.fName || data.lName){
-							$("#countryListP").html(`${data.fName} 
-								${data.lName} <br> 
+							$("#countryListP").html(` <Found user: <br> <br> <red>${data.fName} 
+								${data.lName} 
 							`)
 
 						}
 					});
 			
-
 					
 
 
-				}, 300);
 
 
 				});

@@ -9,6 +9,7 @@ app.set('view,', './views');
 app.set('view engine', 'pug');
 app.use(bodyParser.urlencoded({ extended: true }))
 
+// Match input with the JSON file or re-render the index if not found.
 app.get('/', function(req, res) {
 
     if (req.query.usrInput) {
@@ -26,9 +27,7 @@ app.get('/', function(req, res) {
 
             }
         }
-
-    } 
-    else {
+    } else {
         res.render('index');
     }
 })
